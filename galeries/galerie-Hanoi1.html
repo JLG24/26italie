@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Hanoï 1</title>
+
+  <link rel="stylesheet" href="../assets/css/galerie.css">
+  <link rel="stylesheet" href="../assets/glightbox/glightbox.min.css">
+  <script src="../assets/glightbox/glightbox.min.js"></script>
+</head>
+
+<body>
+
+<h1>1<sup>er</sup> jour à Hanoï (19 avril)</h1> 
+
+<p><a href="../index.html">← Retour à la carte</a></p>
+
+<section class="gallery" id="gallery"></section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const gallery = document.getElementById("gallery");
+  const fragment = document.createDocumentFragment();
+  const totalPhotos = 57; // Nombre total de photos dans la galerie
+
+
+
+  
+
+
+
+
+for (let i = 1; i <= totalPhotos; i++) {
+
+  let fileName = `viet - ${i}.jpeg`;
+
+  // 🎒 Définition du titre selon la séquence
+  let titre;
+
+  if (i <= 2) {
+    titre = "Escale à Moscou";
+  } else if (i <= 8) {
+    titre = "Arrivée à Hanoï";
+  } else if (i <= 16) {
+    titre = "Découverte de la ville";
+  } else if (i <= 34) {
+    titre = "Temple Ngoc Son et lac Hoan Kiem";
+  } else {
+    titre = "Dans les rues de Hanoï";
+  }
+
+  const link = document.createElement("a");
+  link.href = `../photo/Hanoi1118-1119/Full/${fileName}`;
+  link.className = "gallery-item glightbox";
+  link.dataset.gallery = "Hanoi1";
+  link.dataset.title = titre;
+  link.dataset.description = `Carnet de voyage — ${titre}`;
+
+  const img = document.createElement("img");
+  img.src = `../photo/Hanoi1118-1119/Mini/${fileName}`;
+  img.alt = titre;
+  img.loading = "lazy";
+
+  const caption = document.createElement("div");
+  caption.className = "caption";
+  caption.innerHTML = `<h3>${titre}</h3><p>Hanoï</p>`;
+
+  link.appendChild(img);
+  link.appendChild(caption);
+  fragment.appendChild(link);
+}
+
+
+
+
+  gallery.appendChild(fragment);
+
+  GLightbox({
+    selector: '.glightbox',
+    loop: true
+  });
+
+});
+</script>
+
+<p><a href="../index.html">← Retour à la carte</a></p>
+
+</body>
+</html>

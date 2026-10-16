@@ -1,0 +1,188 @@
+/* ================================
+   BASE GÉNÉRALE
+   ================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* ================================
+   STRUCTURE
+   ================================ */
+
+header,
+main,
+footer {
+  max-width: 900px;
+  margin: auto;
+  padding: 1.5rem;
+  background-color: #ffffff;
+}
+
+header {
+  border-bottom: 1px solid #ddd;
+}
+
+footer {
+  border-top: 1px solid #ddd;
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+/* ================================
+   NAVIGATION
+   ================================ */
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #003366;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   TITRES
+   ================================ */
+
+h1 {
+  font-size: 2.4rem;
+  margin: 1.25rem 0 0.75rem 0;
+  text-align: center;
+  color: #003366;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.3rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+/* ================================
+   TEXTE
+   ================================ */
+
+p {
+  margin: 1rem 0;
+}
+
+ul {
+  margin: 1rem 0 1rem 1.5rem;
+}
+
+li {
+  margin: 0.4rem 0;
+}
+
+/* ================================
+   LIENS
+   ================================ */
+
+a {
+  color: #003366;
+}
+
+a:hover {
+  color: #000;
+}
+
+/* ================================
+   IMAGES
+   ================================ */
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0.5rem 0;
+}
+
+/* ================================
+   GALERIES SIMPLES
+   ================================ */
+body {
+  background: #f4efe6; /* ton papier */
+  font-family: "Georgia", serif;
+  color: #3a352f;
+  margin: 0;
+}
+
+/* Galerie */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 50px;
+  padding: 70px 10%;
+}
+
+/* Carte photo */
+.gallery-item {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.4s ease;
+}
+
+/* Image */
+.gallery-item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+/* Effet léger au survol */
+.gallery-item:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+/* Légende style carnet */
+.caption {
+  margin-top: 14px;
+  text-align: left;
+}
+
+.caption h3 {
+  font-size: 1.05rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.caption p {
+  font-size: 0.85rem;
+  color: #8b7765;
+  margin-top: 4px;
+  font-style: italic;
+}
+
+.caption::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: #c8b8a6;
+  margin-bottom: 8px;
+}
