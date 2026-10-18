@@ -12,20 +12,12 @@ L.tileLayer(
 ).addTo(map);
 
 
-L.marker([21.008, 105.864])
+L.marker([44.418161, 12.201916])
   .addTo(map)
   .bindPopup(`
-    <strong>19 avril</strong><br>
-    <a href="galeries/galerie-Hanoi1.html">
-      Voir la galerie
-    </a><br>
-     <strong>20 avril</strong><br>
-    <a href="galeries/galerie-Hanoi2.html">
-      Voir la galerie
-    </a><br>
-     <strong>21 avril</strong><br>
-    <a href="galeries/galerie-Hanoi3.html">
-      Voir la galerie
+    <strong>19 septembre</strong><br>
+    <a href="galeries/galerie-Ravenne.html">
+    Ravenne
     </a><br>
   `);
 
