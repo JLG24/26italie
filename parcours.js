@@ -16,30 +16,12 @@ L.marker([44.418161, 12.201916])
   .addTo(map)
   .bindPopup(`
     <strong>19 septembre</strong><br>
-    <a href="galeries/galerie-Ravenne.html">
+    <a href="galeries/galerie-ravenne.html">
     Ravenne
     </a><br>
   `);
 
-L.marker([22.335394, 103.839332])
-  .addTo(map)
-  .bindPopup(`
-    <strong>Sa Pa</strong><br>
-    <strong>22 avril</strong><br>
-    <a href="galeries/galerie_sapa.html">
-      Arrivée à Sa Pa
-    </a><br>
-  `);
 
-L.marker([22.3026607, 103.8885788])
-  .addTo(map)
-  .bindPopup(`
-    <strong>Sa Pa</strong><br>
-    <strong>22 avril</strong><br>
-    <a href="galeries/galerie-tribus.html">
-     Rencontre avec les tribus locales
-    </a><br>
-  `);   
 
 var parcours = [
   [21.008, 105.864], //  //
@@ -55,11 +37,3 @@ L.polyline(parcours, {
   weight: 2,
   dashArray: "4,4"
   }).addTo(map);
-//L.marker([21.008, 110.864])
-//  .addTo(map)
-//  .bindTooltip("Souchez (9–12 mai 1915)", { permanent: true })
-//  .bindPopup(
-//    "<strong>Combats de Souchez</strong><br>" +
-//    "Pertes importantes signalées au JMO.<br>" +
-//    "<em>Source : JMO du régiment</em>"
-//  );
