@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ravenne</title>
+
+  <link rel="stylesheet" href="../assets/css/galerie.css">
+  <link rel="stylesheet" href="../assets/glightbox/glightbox.min.css">
+
+  <script src="../assets/glightbox/glightbox.min.js"></script>
+</head>
+
+<body>
+
+<h1>Ferrare — 20 septembre</h1>
+
+<p><a href="../index.html">← Retour à la carte</a></p>
+
+<section class="gallery" id="gallery"></section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const gallery = document.getElementById("gallery");
+  const fragment = document.createDocumentFragment();
+
+  const totalPhotos = 3;
+
+  for (let i = 1; i <= totalPhotos; i++) {
+
+    const fileName = `italie - ${i}.jpeg`;
+
+    // Titre personnalisé selon le numéro de la photo
+    let titre;
+
+    if (i == 1) {
+      titre = "L'immeuble de notre logement";
+    }
+
+    const link = document.createElement("a");
+
+    link.href = `../photo/photos0920/full/${fileName}`;
+    link.className = "gallery-item glightbox";
+    link.dataset.gallery = "Ravenne";
+    link.dataset.title = titre;
+    link.dataset.description = "Ferrare — 20 septembre";
+
+    const img = document.createElement("img");
+
+    img.src = `../photo/photos0920/mini/${fileName}`;
+    img.alt = titre;
+    img.loading = "lazy";
+
+    const caption = document.createElement("div");
+    caption.className = "caption";
+    caption.innerHTML = `<h3>${titre}</h3><p>Ferrare — 20 septembre</p>`;
+
+    link.appendChild(img);
+    link.appendChild(caption);
+
+    fragment.appendChild(link);
+  }
+
+  gallery.appendChild(fragment);
+
+  GLightbox({
+    selector: ".glightbox",
+    loop: true
+  });
+
+});
+</script>
+
+<p><a href="../index.html">← Retour à la carte</a></p>
+
+</body>
+</html>
