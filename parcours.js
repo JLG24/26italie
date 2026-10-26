@@ -19,6 +19,10 @@ L.marker([44.418161, 12.201916])
     <a href="galeries/galerie-ravenne.html">
     Ravenne
     </a><br>
+    <strong>22 septembre</strong><br>
+    <a href="galeries/galerie-ravenne2.html">
+    Ravenne
+    </a><br>
   `);
   
 L.marker([44.837607, 11.619539])
