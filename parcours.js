@@ -34,6 +34,15 @@ L.marker([44.837607, 11.619539])
     </a><br>
   `);
 
+ L.marker([44.326233, 12.320716])
+  .addTo(map)
+  .bindPopup(`
+    <strong>21 septembre</strong><br>
+    <a href="galeries/galerie-261021.html">
+    Agriturismo La Casina
+    </a><br>
+  `); 
+
 
 var parcours = [
   [21.008, 105.864], //  //
