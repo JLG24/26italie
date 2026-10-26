@@ -26,30 +26,30 @@ document.addEventListener("DOMContentLoaded", function () {
   const gallery = document.getElementById("gallery");
   const fragment = document.createDocumentFragment();
 
-  const totalPhotos = 3;
+  const totalPhotos = 5;
 
   for (let i = 1; i <= totalPhotos; i++) {
 
-    const fileName = `italie - ${i}.jpeg`;
+    const fileName = `italie-${i}.jpeg`;
 
     // Titre personnalisé selon le numéro de la photo
     let titre;
 
-    if (i == 1) {
-      titre = "L'immeuble de notre logement";
+    if (i <6) {
+      titre = "Repas à l'agriturismo La Casina";
     }
 
     const link = document.createElement("a");
 
     link.href = `../photo/photos0921/full/${fileName}`;
     link.className = "gallery-item glightbox";
-    link.dataset.gallery = "Ravenne";
+    link.dataset.gallery = "Agriturismo La Casina";
     link.dataset.title = titre;
-    link.dataset.description = "Ferrare — 20 septembre";
+    link.dataset.description = "21 septembre";
 
     const img = document.createElement("img");
 
-    img.src = `../photo/photos0920/mini/${fileName}`;
+    img.src = `../photo/photos0921/mini/${fileName}`;
     img.alt = titre;
     img.loading = "lazy";
 
