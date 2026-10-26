@@ -35,18 +35,21 @@ document.addEventListener("DOMContentLoaded", function () {
     // Titre personnalisé selon le numéro de la photo
     let titre;
 
-    if (i == 1) {
-      titre = "L'immeuble de notre logement";
-    } else if (i < 5) {
-      titre = "Mausolée de Galla Placidia";
-    } else if (i == 5) { 
-      titre = "Premier capuccino ";  
-     } else if (i < 10) {
-        titre = "Cathédrale San Vitale";  
+    if (i < 7) {
+      titre = "Chateau d'Este";
+    } else if (i < 8
+    ) {
+      titre = "Pause déjeuner";
+    } else if (i <11) { 
+      titre = "Palazzo dei Diamanti"; ";  
+     } else if (i < 12) {
+        titre = "Palazzo Prosperi Sacrati";  
     }else if (i <13) {
-      titre = "Batisterio Neoniano";  
-    } else  {
-      titre = "Basilique Sant'Apollinare Nuovo";  
+      titre = "Palazzo Municipale";  
+    }else if (i <15) {
+      titre = "Pause fraicheur";  
+    }  else  {
+      titre = "Cathédrale de Ferrare";  
     } 
 
     
