@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ravenne</title>
+  <title>Ferrare</title>
 
   <link rel="stylesheet" href="../assets/css/galerie.css">
   <link rel="stylesheet" href="../assets/glightbox/glightbox.min.css">
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
         titre = "Palazzo Prosperi Sacrati";  
     }else if (i <13) {
       titre = "Palazzo Municipale";  
-    }else if (i <15) {
+    }else if (i <16) {
       titre = "Pause fraicheur";  
     }  else  {
       titre = "Cathédrale de Ferrare";  
@@ -67,9 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     img.alt = titre;
     img.loading = "lazy";
 
-img.onerror = function () {
-  console.error("Vignette introuvable :", img.src);
-};
+
 
     const caption = document.createElement("div");
     caption.className = "caption";
