@@ -14,7 +14,7 @@
 
 <body>
 
-<h1>Ravenne — 19 septembre</h1>
+<h1>Ravenne — 22 septembre</h1>
 
 <p><a href="../index.html">← Retour à la carte</a></p>
 
@@ -26,34 +26,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const gallery = document.getElementById("gallery");
   const fragment = document.createDocumentFragment();
 
-  const totalPhotos = 14;
+  const totalPhotos = 16;
 
-  for (let i = 1; i <= totalPhotos; i++) {
+  for (let i = 0; i <= totalPhotos; i++) {
 
     const fileName = `italie - ${i}.jpeg`;
 
     // Titre personnalisé selon le numéro de la photo
-    let titre;
-
-    if (i == 1) {
-      titre = "L'immeuble de notre logement";
-    } else if (i < 5) {
-      titre = "Mausolée de Galla Placidia";
-    } else if (i == 5) { 
-      titre = "Premier capuccino ";  
-     } else if (i < 10) {
-        titre = "Cathédrale San Vitale";  
-    }else if (i <13) {
-      titre = "Batisterio Neoniano";  
-    } else  {
-      titre = "Basilique Sant'Apollinare Nuovo";  
-    } 
+    
+      titre = "Basilique Sant'Apollinare in Classe";  
+    
 
     
 
     const link = document.createElement("a");
 
-    link.href = `../photo/Ravenne/full/${fileName}`;
+    link.href = `../photo/Ravenne2/full/${fileName}`;
     link.className = "gallery-item glightbox";
     link.dataset.gallery = "Ravenne";
     link.dataset.title = titre;
@@ -61,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const img = document.createElement("img");
 
-    img.src = `../photo/Ravenne/mini/${fileName}`;
+    img.src = `../photo/Ravenne2/mini/${fileName}`;
     img.alt = titre;
     img.loading = "lazy";
 
