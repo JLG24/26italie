@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ravenne</title>
+
+  <link rel="stylesheet" href="../assets/css/galerie.css">
+  <link rel="stylesheet" href="../assets/glightbox/glightbox.min.css">
+
+  <script src="../assets/glightbox/glightbox.min.js"></script>
+</head>
+
+<body>
+
+<h1>Comacchio — 22 septembre</h1>
+
+<p><a href="../index.html">← Retour à la carte</a></p>
+
+<section class="gallery" id="gallery"></section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const gallery = document.getElementById("gallery");
+  const fragment = document.createDocumentFragment();
+
+  const totalPhotos = 23;
+
+  for (let i = 0; i <= totalPhotos; i++) {
+
+    const fileName = `italie - ${i}.jpeg`;
+
+    // Titre personnalisé selon le numéro de la photo
+    
+      titre = "Comacchio";  
+    
+
+    
+
+    const link = document.createElement("a");
+
+    link.href = `../photo/Ravenne2/full/${fileName}`;
+    link.className = "gallery-item glightbox";
+    link.dataset.gallery = "Ravenne";
+    link.dataset.title = titre;
+    link.dataset.description = "Ravenne — 22 septembre";
+
+    const img = document.createElement("img");
+
+    img.src = `../photo/Ravenne2/mini/${fileName}`;
+    img.alt = titre;
+    img.loading = "lazy";
+
+    const caption = document.createElement("div");
+    caption.className = "caption";
+    caption.innerHTML = `<h3>${titre}</h3><p>Ravenne — 19 septembre</p>`;
+
+    link.appendChild(img);
+    link.appendChild(caption);
+
+    fragment.appendChild(link);
+  }
+
+  gallery.appendChild(fragment);
+
+  GLightbox({
+    selector: ".glightbox",
+    loop: true
+  });
+
+});
+</script>
+
+<p><a href="../index.html">← Retour à la carte</a></p>
+
+</body>
+</html>

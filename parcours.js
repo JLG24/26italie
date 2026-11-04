@@ -43,6 +43,14 @@ L.marker([44.837607, 11.619539])
     </a><br>
   `); 
 
+  L.marker([44.7199, 12.1797])
+  .addTo(map)
+  .bindPopup(`
+    <strong>22 septembre</strong><br>
+    <a href="galeries/galerie-comacchio.html">
+   Comacchio
+    </a><br>
+  `); 
 
 var parcours = [
   [21.008, 105.864], //  //
