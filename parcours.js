@@ -52,7 +52,7 @@ L.marker([44.837607, 11.619539])
     </a><br>
   `); 
 
-   L.marker([44.476697 11.010731])
+   L.marker([44.476697, 11.010731])
   .addTo(map)
   .bindPopup(`
     <strong>22 septembre</strong><br>
