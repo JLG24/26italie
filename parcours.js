@@ -56,7 +56,7 @@ L.marker([44.837607, 11.619539])
   .addTo(map)
   .bindPopup(`
     <strong>22 septembre</strong><br>
-    <a href="galeries/galerie-.html">
+    <a href="galeries/galerie-vignola.html">
    Vignola
     </a><br>
   `); 
