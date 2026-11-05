@@ -34,7 +34,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Titre personnalisé selon le numéro de la photo
     
-      titre = "Comacchio";  
+ let titre;
+
+    if (i < 8) {
+      titre = "Anguille grillée et friture de poissons";
+    } else if (i < 9) {
+      titre = "Terrasse du restaurant";
+    } else if (i <20) { 
+      titre = "Les canaux de Comacchio";  
+     } else if (i < 22) {
+        titre = "les arcades des capucins";  
+    }  else  {
+      titre = "La mer adriatique";  
+    } 
+
     
 
     
