@@ -36,18 +36,29 @@ document.addEventListener("DOMContentLoaded", function () {
     
  let titre;
 
-    if (i < 3) {
-      titre = "Pizzeria - Pause déjeuner";
-    } else if (i < 6) {
-      titre = "Rocca di Vignola";
-    } else if (i < 7) { 
-      titre = "Clin d'oeil";   
-    }  else  {
-      titre = "Spillamberto : Glace au vinaigre balsamique";  
-    } 
+switch (i) {
+    case 1:
+    case 2:
+        titre = "Pizzeria - Pause déjeuner";
+        break;
 
-    
+    case 3:
+    case 4:
+    case 5:
+        titre = "Rocca di Vignola";
+        break;
 
+    case 6:
+        titre = "Clin d'œil";
+        break;
+
+    case 7:
+        titre = "Spillamberto : Glace au vinaigre balsamique";
+        break;
+
+    default:
+        titre = "Italie";
+}
     
 
     const link = document.createElement("a");
