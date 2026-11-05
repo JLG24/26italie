@@ -52,6 +52,15 @@ L.marker([44.837607, 11.619539])
     </a><br>
   `); 
 
+   L.marker([44.476697 11.010731])
+  .addTo(map)
+  .bindPopup(`
+    <strong>22 septembre</strong><br>
+    <a href="galeries/galerie-.html">
+   Vignola
+    </a><br>
+  `); 
+
 var parcours = [
   [21.008, 105.864], //  //
   [22.335394, 103.839332],// Hotel Sapa
