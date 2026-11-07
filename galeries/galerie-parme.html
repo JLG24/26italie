@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Parme</title>
+
+  <link rel="stylesheet" href="../assets/css/galerie.css">
+  <link rel="stylesheet" href="../assets/glightbox/glightbox.min.css">
+
+  <script src="../assets/glightbox/glightbox.min.js"></script>
+</head>
+
+<body>
+
+<h1>Parme — 24 septembre</h1>
+
+<p><a href="../index.html">← Retour à la carte</a></p>
+
+<section class="gallery" id="gallery"></section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const gallery = document.getElementById("gallery");
+  const fragment = document.createDocumentFragment();
+
+  const totalPhotos = 28;
+
+  for (let i = 1; i <= totalPhotos; i++) {
+
+    const fileName = `italie - ${i}.jpeg`;
+
+    // Titre personnalisé selon le numéro de la photo
+    
+ let titre;
+
+    if (i < 8) {
+      titre = "Anguille grillée et friture de poissons";
+    } else if (i < 9) {
+      titre = "Terrasse du restaurant";
+    } else if (i <20) { 
+      titre = "Les canaux de Comacchio";  
+     } else if (i < 22) {
+        titre = "les arcades des capucins";  
+    }  else  {
+      titre = "La mer adriatique";  
+    } 
+
+    
+
+    
+
+    const link = document.createElement("a");
+
+    link.href = `../photo/photos0924/full/${fileName}`;
+    link.className = "gallery-item glightbox";
+    link.dataset.gallery = "Comacchio";
+    link.dataset.title = titre;
+    link.dataset.description= "Parme - 24 septembre";
+
+    const img = document.createElement("img");
+
+    img.src = `../photo/photos0924/mini/${fileName}`;
+    img.alt = titre;
+    img.loading = "lazy";
+
+    const caption = document.createElement("div");
+    caption.className = "caption";
+    caption.innerHTML = `<h3>${titre}</h3><p>Parme - 24 septembre</p>`;
+
+    link.appendChild(img);
+    link.appendChild(caption);
+
+    fragment.appendChild(link);
+  }
+
+  gallery.appendChild(fragment);
+
+  GLightbox({
+    selector: ".glightbox",
+    loop: true
+  });
+
+});
+</script>
+
+<p><a href="../index.html">← Retour à la carte</a></p>
+
+</body>
+</html>

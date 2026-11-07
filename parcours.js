@@ -55,9 +55,18 @@ L.marker([44.837607, 11.619539])
    L.marker([44.476697, 11.010731])
   .addTo(map)
   .bindPopup(`
-    <strong>22 septembre</strong><br>
+    <strong>23 septembre</strong><br>
     <a href="galeries/galerie-vignola.html">
-   Vignola
+    Entre Ravenne et Reggio d'Emilia
+    </a><br>
+  `); 
+
+     L.marker([44.813, 10.3306])
+  .addTo(map)
+  .bindPopup(`
+    <strong>24 septembre</strong><br>
+    <a href="galeries/galerie-parme.html">
+    Parme
     </a><br>
   `); 
 
