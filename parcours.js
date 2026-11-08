@@ -106,6 +106,16 @@ L.marker([44.837607, 11.619539])
     </a><br>
   `); 
 
+   L.marker([44.64686, 10.92642])
+  .addTo(map)
+  .bindPopup(`
+    <strong>27 septembre</strong><br>
+    <a href="galeries/galerie-modene.html">
+    Modène
+    </a><br>
+  `); 
+
+
 var parcours = [
   [21.008, 105.864], //  //
   [22.335394, 103.839332],// Hotel Sapa
