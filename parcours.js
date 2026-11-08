@@ -1,5 +1,5 @@
 // Initialisation de la carte
-var map = L.map('map').setView([44.52, 11.338], 8);
+var map = L.map('map').setView([44.52, 11.338], 9);
 
 // Fond de carte
 
@@ -85,6 +85,15 @@ L.marker([44.837607, 11.619539])
     <strong>25 septembre</strong><br>
     <a href="galeries/galerie-carpi.html">
     Carpi
+    </a><br>
+  `); 
+
+  L.marker([44.49323, 11.343663])
+  .addTo(map)
+  .bindPopup(`
+    <strong>26 septembre</strong><br>
+    <a href="galeries/galerie-bologne.html">
+    Bologne
     </a><br>
   `); 
 
