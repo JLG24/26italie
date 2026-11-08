@@ -70,6 +70,15 @@ L.marker([44.837607, 11.619539])
     </a><br>
   `); 
 
+    L.marker([44.694576, 10.622932])
+  .addTo(map)
+  .bindPopup(`
+    <strong>23-29 septembre</strong><br>
+    <a href="galeries/galerie-reggio.html">
+    Reggio d'Emilia
+    </a><br>
+  `); 
+
 var parcours = [
   [21.008, 105.864], //  //
   [22.335394, 103.839332],// Hotel Sapa
